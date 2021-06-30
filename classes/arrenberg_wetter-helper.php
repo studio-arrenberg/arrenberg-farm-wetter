@@ -60,15 +60,15 @@ else {
 
 ?>
 
-<div class="card landscape  bg_blue" data-content-piece="Arrenberg Wetter">
+<div class="card arrenberg-wetter  bg_blue" data-content-piece="Arrenberg Wetter">
     <!-- A Tag sollte nicht für seletor der styles genutzt werden -->
     <!-- Bitte A Tag raus nehmen -->
         <div class="content white-text">
-            <div class="emojis-top"><?php echo preg_replace('/\./', ',',$json_decoded->data[0]->values->avg[0]); ?>°C</div>
-            <h3 class="card-title">
+            <span class="heading-size-1"><?php echo preg_replace('/\./', ',',$json_decoded->data[0]->values->avg[0]); ?>°C</span>
+            <h3 class="heading-size-3">
                 Das aktuelle Wetter von der Arrenberg Farm<?php // echo date('G:i',$json_decoded->dates[0]);  ?>
             </h3>
-            <p class="preview-text">
+            <p class="text-size-3 ">
                 <?php echo number_format($json_decoded->data[9]->values->avg[0], 0); ?>% Luftfeuchtigkeit & <?php echo $secondary; ?>  <br>
 
             </p>
